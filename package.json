@@ -1,6 +1,6 @@
 {
   "name": "odem",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Odem",
   "main": "index.js",
   "scripts": {
