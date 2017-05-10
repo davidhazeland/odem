@@ -1,0 +1,22 @@
+{
+  "name": "odem",
+  "version": "0.1.0",
+  "description": "Odem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/davidhazeland/odem.git"
+  },
+  "keywords": [
+    "odem"
+  ],
+  "author": "David Hazeland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidhazeland/odem/issues"
+  },
+  "homepage": "https://github.com/davidhazeland/odem#readme"
+}
