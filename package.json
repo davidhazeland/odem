@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/davidhazeland/odem#readme",
   "dependencies": {
+    "axios": "^0.16.1",
     "humps": "^2.0.0",
     "lodash": "^4.17.4",
     "semantic-ui-react": "^0.68.3",
