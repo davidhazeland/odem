@@ -11,3 +11,8 @@ export function create({baseURL, token}) {
     transformResponse: [data => camelizeKeys(data)]
   })
 }
+
+export function updateToken(instance, token) {
+  instance.defaults.headers.common['Authorization'] = `Bearer ${token}`
+  return instance;
+}
