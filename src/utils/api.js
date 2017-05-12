@@ -8,7 +8,7 @@ export function create({baseURL, token}) {
       'Authorization': `Bearer ${token}`
     },
     transformRequest: [data => decamelizeKeys(data)],
-    transformResponse: [data => camelizeKeys(data)]
+    transformResponse: [JSON.parse, data => camelizeKeys(data)]
   })
 }
 

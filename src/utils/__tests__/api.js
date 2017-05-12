@@ -8,7 +8,7 @@ test('request() function', assert => {
   })
   api.get('/get').then(response => {
     assert.deepEqual(response.status, 200,
-      'should be request success')
+      'should be returned 200')
     assert.end()
   })
 })
