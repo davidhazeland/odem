@@ -1,13 +1,9 @@
 import _ from 'lodash'
 import { delay } from 'redux-saga'
-import {
-  call,
-  spawn,
-  all
-} from 'redux-saga/effects'
+import { call, spawn, all } from 'redux-saga/effects'
 
-export const flatten = sagaList => {
-  return _.values(sagaList).reduce((acc, item) => {
+export const flatten = sagas => {
+  return _.values(sagas).reduce((acc, item) => {
     return acc.concat(_.values(item))
   }, [])
 }
@@ -28,9 +24,9 @@ const makeRestartable = saga => {
   }
 }
 
-export const create = sagaList => {
+export const create = sagas => {
   return function*() {
-    const sagas = flatten(sagas).map(makeRestartable)
-    yield all(sagas.map(saga => call(saga)))
+    const sagaList = flatten(sagas).map(makeRestartable)
+    yield all(sagaList.map(saga => call(saga)))
   }
 }
