@@ -24,7 +24,7 @@ const makeRestartable = saga => {
   }
 }
 
-export const create = sagas => {
+export const combineSagas = sagas => {
   return function*() {
     const sagaList = flatten(sagas).map(makeRestartable)
     yield all(sagaList.map(saga => call(saga)))
