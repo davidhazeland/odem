@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-import React, { PropTypes } from 'react';
+import React, {PropTypes} from 'react'
 
 import { Input } from 'semantic-ui-react'
 
@@ -11,17 +11,17 @@ const TextBox = (props) => {
       ...input
     },
     ...custom
-  } = props;
+  } = props
 
   return (
     <Input onChange={(e, data)=>onChange(data.value)} {...input} {...custom}/>
-  );
-};
+  )
+}
 
-TextBox.displayName = 'TextBox';
+TextBox.displayName = 'TextBox'
 
 TextBox.propTypes = {
   input: PropTypes.object.isRequired
 }
 
-export default TextBox;
+export default TextBox
