@@ -12,3 +12,4 @@ export {default as CheckBox} from './check-box'
 
 export {default as Message} from './message'
 export {default as List} from './list'
+export {default as Confirm} from './confirm'
