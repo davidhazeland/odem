@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react'
 
-import { Form as FormComponent, Field, TextBox, TextArea } from '../index'
+import { Form as FormComponent, Field, TextBox, TextArea, CheckBoxes } from '../index'
 import { Button } from 'semantic-ui-react'
 
 const getComponent = type => {
@@ -11,6 +11,8 @@ const getComponent = type => {
     case 'textarea':
       return TextArea
       break;
+    case 'checkbox':
+      return CheckBoxes
     default:
       return 'input'
   }
@@ -37,6 +39,7 @@ const Form = (props) => {
             name={field.name}
             label={field.label}
             component={getComponent(field.type)}
+            componentProps={field.meta}
           />
         )
       })}
