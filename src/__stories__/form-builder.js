@@ -14,19 +14,21 @@ const store = createStore(combineReducers({
 }));
 
 const name = 'form'
-const definition = {
-  "fields": [
-    {
-      "name": "name",
-      "label": "Name",
-      "type": "textbox"
-    },
-    {
-      "name": "email",
-      "label": "Email",
-      "type": "textbox"
-    }
-  ]
+const object = {
+  definition: {
+    "fields": [
+      {
+        "name": "name",
+        "label": "Name",
+        "type": "textbox"
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "textbox"
+      }
+    ]
+  }
 }
 
 const Form = FormBuilder(name)
@@ -35,7 +37,7 @@ storiesOf('FormBuilder', module)
   .add('default', () => {
     return (
       <Provider store={store}>
-        <Form action="Submit" definition={definition}/>
+        <Form action="Submit" object={object}/>
       </Provider>
     );
   })

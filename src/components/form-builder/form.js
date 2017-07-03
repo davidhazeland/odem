@@ -19,13 +19,15 @@ const getComponent = type => {
 const Form = (props) => {
   const {
     action,
-    definition,
+    object,
 
     submitting,
     ...rest
   } = props
 
-  const { fields } = definition
+  if (!object) return null
+
+  const { definition: {fields} } = object
 
   return (
     <FormComponent {...rest}>
