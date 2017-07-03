@@ -4,3 +4,4 @@ import './message';
 import './field';
 import './check-boxes';
 import './list';
+import './form-builder';
