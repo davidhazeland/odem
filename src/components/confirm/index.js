@@ -39,11 +39,11 @@ class Confirm extends Component {
           <p>{this.props.text}</p>
         </Modal.Content>
         <Modal.Actions>
-          <Button color='red' inverted onClick={this.handleCancel.bind(this)}>
-            <Icon name='remove' /> Cancel
-          </Button>
           <Button color='green' inverted onClick={this.handleConfirm.bind(this)}>
             <Icon name='checkmark'/> OK
+          </Button>
+          <Button color='red' inverted onClick={this.handleCancel.bind(this)}>
+            <Icon name='remove' /> Cancel
           </Button>
         </Modal.Actions>
       </Modal>
