@@ -20,18 +20,19 @@
     "axios": "^0.16.1",
     "humps": "^2.0.0",
     "lodash": "^4.17.4",
+    "raket-semantic-ui": "git+ssh://git@github.com/ironnext/raket-semantic-ui.git",
     "react": "15.4.2",
     "react-checkbox-group": "^3.1.1",
     "react-dom": "15.4.2",
     "react-prop-types": "^0.4.0",
+    "react-radio-group": "^3.0.2",
     "react-redux": "^5.0.4",
     "react-redux-i18n": "^1.8.0",
     "redux": "^3.6.0",
     "redux-form": "^6.7.0",
     "redux-saga": "^0.15.3",
     "semantic-ui-react": "^0.68.3",
-    "validate.js": "^0.11.1",
-    "raket-semantic-ui": "git+ssh://git@github.com/ironnext/raket-semantic-ui.git"
+    "validate.js": "^0.11.1"
   },
   "scripts": {
     "test": "tape -r babel-register **/**/__tests__/*.js | faucet",
