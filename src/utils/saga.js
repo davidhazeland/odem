@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import { delay } from 'redux-saga'
-import { call, spawn, all } from 'redux-saga/effects'
+import { call, spawn, all, fork, take } from 'redux-saga/effects'
 
 export const flatten = sagas => {
   return _.values(sagas).reduce((acc, item) => {
@@ -29,4 +29,15 @@ export const combineSagas = sagas => {
     const sagaList = flatten(sagas).map(makeRestartable)
     yield all(sagaList.map(saga => call(saga)))
   }
+}
+
+
+export function* takeFirst(pattern, saga, ...args) {
+  const task = yield fork(function* () {
+    while(true) {
+      const action = yield take(pattern);
+      yield call(saga, ...args.concat(action));
+    }
+  });
+  return task;
 }
