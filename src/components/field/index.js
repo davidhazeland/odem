@@ -22,7 +22,7 @@ const renderField = field => {
 
   return (
     <Form.Field {...fieldProps} error={hasError}>
-      <label htmlFor={name}>{label}</label>
+      {label && <label htmlFor={name}>{label}</label>}
       {createElement(component, {
         input,
         id: name,

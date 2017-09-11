@@ -8,6 +8,7 @@ export {default as CheckBoxes} from './check-boxes'
 export {default as TextArea} from './text-area'
 export {default as CheckBox} from './check-box'
 export {default as RadioGroup} from './radio-group'
+export {default as DatePicker} from './date-picker'
 
 // Custom
 
