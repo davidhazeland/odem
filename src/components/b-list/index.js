@@ -22,7 +22,7 @@ const List = (props) => {
 
   return (
     <div {...custom}>
-      <Table singleLine {...tableProps}>
+      <Table {...tableProps}>
         <Header renderers={renderers}/>
 
         <Body data={data} renderers={renderers}/>
