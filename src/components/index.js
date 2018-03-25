@@ -14,5 +14,6 @@ export {default as DatePicker} from './date-picker'
 
 export {default as Message} from './message'
 export {default as List} from './list'
+export {default as BList} from './b-list'
 export {default as Confirm} from './confirm'
 export {default as FormBuilder} from './form-builder'

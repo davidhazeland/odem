@@ -5,10 +5,11 @@ export function create({baseURL, token}) {
   return axios.create({
     baseURL,
     headers: {
-      'Authorization': `Bearer ${token}`
+      'Authorization': `Bearer ${token}`,
+      'Accept': 'application/json'
     },
-    transformRequest: [data => decamelizeKeys(data)],
-    transformResponse: [JSON.parse, data => camelizeKeys(data)]
+    // transformRequest: [data => decamelizeKeys(data)],
+    // transformResponse: [JSON.parse, data => camelizeKeys(data)]
   })
 }
 
